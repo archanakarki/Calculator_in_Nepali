@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
 }
 
@@ -9,7 +9,7 @@ body {
 
 @media (max-width: 540px) {
 
-    main{
+    main {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -18,7 +18,7 @@ body {
         background-color: #FDFDFD;
     }
 
-    #display{
+    #display {
         width: 100%;
         height: 40vh;
         text-align: right;
@@ -29,7 +29,7 @@ body {
         right: 0;
     }
 
-    #display_values{
+    #display_values {
         font-size: 5rem;
     }
 
@@ -43,7 +43,7 @@ body {
         flex-direction: row;
         flex-wrap: wrap;
         background-color: #2F343C;
-        height:60vh;
+        height: 60vh;
     }
 
     button {
@@ -60,7 +60,7 @@ body {
         background-color: #2f3b3c;
     }
 
-    #button_equal{
+    #button_equal {
         border-radius: 50%;
         padding: 5%;
         background-color: rgb(54, 123, 250);

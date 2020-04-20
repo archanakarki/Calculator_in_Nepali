@@ -15,7 +15,7 @@ for (let button of buttons) {
         string = string + value;
         displayValues.textContent = string;
 
-        if(displayValues.textContent.length > 10 && displayValues.textContent.length < 22){
+        if (displayValues.textContent.length > 10 && displayValues.textContent.length < 22) {
             displayValues.style.fontSize = "4.3rem";
             displayValues.style.lineHeight = "1";
         } else if (displayValues.textContent.length > 22) {
