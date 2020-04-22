@@ -3,30 +3,11 @@ let display = document.getElementById('display');
 let displayValues = document.getElementById('display_values');
 
 
-let string = "";
-let operandAndOperator = [];
+// let string = "";
 for (let button of buttons) {
     button.addEventListener('click', (e) => {
         let value = `${e.target.value}`;
-        // addToArray(e.target.value);
-        string = string + value;
-        displayValues.textContent = string;
-        console.log(displayValues.textContent)
+        // string = string + value;
+        // displayValues.textContent = string; //Directly making string might not be the efficient way
     })
-}
-
-
-const calculator = {
-    valuesToDisplay: string
-    // operators: [],
-    // sum: add(),
-    // difference: subtract(),
-    // product: multiply(),
-    // division: divide()
-}
-
-const addToArray = (value) => {
-    // if(typeof(val) == ){
-
-    // }
 }
