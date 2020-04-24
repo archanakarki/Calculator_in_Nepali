@@ -1,26 +1,42 @@
 "use strict";
+/* Select the buttons */
+const buttons = document.getElementsByTagName('button');
+const display = document.getElementById('display');
+const displayValues = document.getElementById('display_values');
 
-let buttons = document.getElementsByTagName('button');
-let display = document.getElementById('display');
-let displayValues = document.getElementById('display_values');
+const buffer = ""; //Display string in the screen
+const total = "";
+let previosOperator; 
 
-let string = "";
-let arrOfInputs = [];
-for (let button of buttons) {
-    button.addEventListener('click', (e) => {
-        /* If = is clicked -> functions */
-        /* If numbers clicked -> add to array */
-        let operatorCheckerRegex = /[+]/g;
-        let numberCheckerRegex = /[0-9०-९.]/ig;
-        let value = e.target.value;
-        // string = string + value;
-
-        //Multiple statement ternery operator in use
-        numberCheckerRegex.test(value) ? string = string + value : (operatorCheckerRegex.test(value) ? (arrOfInputs.push.apply(arrOfInputs, [string, value])) : console.log("Not a num and +"));
-        console.log(string, arrOfInputs)
-    })  
-}  
-
-let calculate = (str) => {
-
+//Init function is the main function of this program.
+const init = () => {
+    for (let button of buttons) {
+        button.addEventListener('click', (event) => {
+            buttonClick(event.target.value);
+        })  
+    } 
 }
+
+const buttonClick = (value) => {
+    let stringNumberOrOperator = parseInt(value, 10)
+    if(isNaN(stringNumberOrOperator) === false){
+        let number = stringNumberOrOperator;
+        handleNumbers(number);
+    } else {
+        let symbol = stringNumberOrOperator;
+        handleSymbols(symbol);
+    }
+}
+
+const handleNumbers = (number) => {
+    alert("Calculator making is in progress. Working in the functionality");
+    console.log(`Number, type ${typeof(number)} ${number}`)
+}
+
+const handleSymbols = (operator) => {
+    alert("Calculator making in progress. Working in the functionality");
+    console.log(`Symbol, type ${typeof(symbol)} ${symbol}`)
+}
+
+
+init();
