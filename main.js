@@ -8,7 +8,6 @@ let string = "";
 let arrOfInputs = [];
 for (let button of buttons) {
     button.addEventListener('click', (e) => {
-
         /* If = is clicked -> functions */
         /* If numbers clicked -> add to array */
         let operatorCheckerRegex = /[+]/g;
